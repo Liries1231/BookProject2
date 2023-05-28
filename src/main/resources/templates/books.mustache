@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Details</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<h1>Book info</h1>
+<button onclick="goBack()">Back</button>
+
+
+<script>
+    function goBack() {
+        history.back();
+    }
+</script>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Author</th> <td><a href="/author/{{id}}">Details</a></td>
+    </tr>
+
+<table>
+
+
+    <td>{{book.id}}</td>
+    <td>{{book.name}}</td>
+    <td>{{book.author}}</td>
+
+
+</table>
+
+</body>
+</html>

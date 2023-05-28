@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div>Create the book</div>
+<div>
+    <form method="post">
+        <input type="text" name="name" placeholder="Create the book" />
+        <input type="text" name="author" placeholder="Author name">
+        <button type="submit">Create</button>
+    </form>
+</div>
+<h2>All Books:</h2>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Author</th>
+    </tr>
+
+
+
+    {{#AllBooks}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{name}}</td>
+            <td>{{author}}</td>
+            <td><a href="/books/{{id}}">Details</a></td>
+            <td><a href="/{{id}}">Delete</a></td>
+            <td><a href="/{{id}}">Update</a></td>
+
+
+
+
+        </tr>
+
+    {{/AllBooks}}
+
+
+
+
+</table>
+</body>
+</html>
+
+
+
+
+
+
